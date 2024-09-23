@@ -1,13 +1,13 @@
 # Variables
 CXX = g++
 CXXFLAGS = -Wall
-TARGET = fibonacci
-SRC = fibonacci.cpp
+TARGET = 1_payslip
+SRC = 1_payslip.cpp
 
 # Default target: compile the program
 all: $(TARGET)
 
-# Compile the fibonacci.cpp
+# Compile the 1_payslip.cpp
 $(TARGET): $(SRC)
 	$(CXX) $(CXXFLAGS) -o $(TARGET) $(SRC)
 
