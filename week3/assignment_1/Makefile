@@ -1,8 +1,8 @@
 # Variables
 CXX = g++
 CXXFLAGS = -Wall
-TARGET = fibonacci
-SRC = fibonacci.cpp
+TARGET = 1_highest_number
+SRC = 1_highest_number.cpp
 
 # Default target: compile the program
 all: $(TARGET)

@@ -1,8 +1,8 @@
 # Variables
 CXX = g++
 CXXFLAGS = -Wall
-TARGET = fibonacci
-SRC = fibonacci.cpp
+TARGET = 2_Quadratic_Equation
+SRC = 2_Quadratic_Equation.cpp
 
 # Default target: compile the program
 all: $(TARGET)

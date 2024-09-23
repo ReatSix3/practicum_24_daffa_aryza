@@ -1,8 +1,8 @@
 # Variables
 CXX = g++
 CXXFLAGS = -Wall
-TARGET = fibonacci
-SRC = fibonacci.cpp
+TARGET = 2_vector_reverter
+SRC = 2_vector_reverter.cpp
 
 # Default target: compile the program
 all: $(TARGET)

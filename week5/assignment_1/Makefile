@@ -1,8 +1,8 @@
 # Variables
 CXX = g++
 CXXFLAGS = -Wall
-TARGET = fibonacci
-SRC = fibonacci.cpp
+TARGET = 1_fizzbuzz_vector
+SRC = 1_fizzbuzz_vector.cpp
 
 # Default target: compile the program
 all: $(TARGET)

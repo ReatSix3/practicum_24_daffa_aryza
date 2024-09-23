@@ -1,8 +1,8 @@
 # Variables
 CXX = g++
 CXXFLAGS = -Wall
-TARGET = fibonacci
-SRC = fibonacci.cpp
+TARGET = 1_number_summer
+SRC = 1_number_summer.cpp
 
 # Default target: compile the program
 all: $(TARGET)
