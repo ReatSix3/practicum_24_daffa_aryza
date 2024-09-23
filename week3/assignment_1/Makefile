@@ -7,7 +7,7 @@ SRC = 1_highest_number.cpp
 # Default target: compile the program
 all: $(TARGET)
 
-# Compile the fibonacci.cpp
+# Compile the cpp
 $(TARGET): $(SRC)
 	$(CXX) $(CXXFLAGS) -o $(TARGET) $(SRC)
 
