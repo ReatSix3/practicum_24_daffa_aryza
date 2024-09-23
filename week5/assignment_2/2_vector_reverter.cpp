@@ -1,23 +1,63 @@
 #include <iostream>
 #include <vector>
 #include <string>
+#include <fstream>
 
-int main(){
-    std::vector<int> old_vektor{5,4,3,2,1};
-    int vk_size = old_vektor.size();
-    std::vector<int> new_vektor;
-    for(int i = (vk_size-1);i >= 0;i-=1){
-        new_vektor.push_back(old_vektor[i]);
+std::vector<std::string> reverse_vector(const std::vector<std::string>& old_vector) {
+    std::vector<std::string> new_vector;
+    int vk_size = old_vector.size();
+    
+    for(int i = (vk_size - 1); i >= 0; i--) {
+        new_vector.push_back(old_vector[i]);
     }
     
-    std::cout << '[';
-    for(int x = 0;x < vk_size;x ++){
-        std::cout<<new_vektor[x];
-        
-        if (x != vk_size - 1) {
-            std::cout << ", ";
+    return new_vector;
+}
+
+std::string vector_to_string(const std::vector<std::string>& vec) {
+    std::string result = "[";
+    for (int x = 0; x < vec.size(); x++) {
+        result += vec[x];
+        if (x != vec.size() - 1) {
+            result += ", ";
         }
     }
-    std::cout << "]\n";
+    result += "]";
+    return result;
+}
+
+int main() {
+    std::ifstream testFile("test.txt");
+    std::vector<std::string> old_vektor;
+    std::string input;
+
+    if (!testFile) {
+        std::cerr << "Error: Could not open test.txt" << std::endl;
+        return 1;
+    }
+
+    while (testFile >> input) {
+        if (input == "exit") {
+            break;
+        }
+        old_vektor.push_back(input);
+    }
+
+    std::string expected_output;
+    std::getline(testFile >> std::ws, expected_output); 
+
+    std::vector<std::string> new_vektor = reverse_vector(old_vektor);
+
+    std::string output = vector_to_string(new_vektor);
+
+    if (output == expected_output) {
+        std::cout << "Test passed!" << std::endl;
+    } else {
+        std::cout << "Test failed. Expected: \"" 
+                  << expected_output << "\", Got: \"" 
+                  << output << "\"" << std::endl;
+    }
+
+    testFile.close();
     return 0;
 }

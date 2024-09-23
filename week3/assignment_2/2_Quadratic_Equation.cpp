@@ -1,26 +1,44 @@
 #include <iostream>
+#include <fstream>
 #include <cmath>
-int main(){
-    long double a,b,c;
-    std::cout<<"Insert the a value of ax^2+bx+c = 0: ";
-    std::cin>>a;
-    std::cout<<"Insert the b value of ax^2+bx+c = 0: ";
-    std::cin>>b;
-    std::cout<<"Insert the c value of ax^2+bx+c = 0: ";
-    std::cin>>c;
-    long double D;
-    D = (pow(b,2))-(4*a*c);
-    if(D>0){
-        long double x1 = (-b+sqrt(D))/2*a;
-        long double x2 = (-b-sqrt(D))/2*a;
-        std::cout<<"The roots of the equation are: "<<x1<<" and "<<x2;
+#include <string>
+
+std::string find_roots(long double a, long double b, long double c) {
+    long double D = (pow(b, 2)) - (4 * a * c);  
+    if (D > 0) {
+        long double x1 = (-b + sqrt(D)) / (2 * a);
+        long double x2 = (-b - sqrt(D)) / (2 * a);
+        return "The roots of the equation are: " + std::to_string(x1) + " and " + std::to_string(x2);
+    } else if (D == 0) {
+        long double x_root = -b / (2 * a);
+        return "The roots are real and equal which is: " + std::to_string(x_root);
+    } else {
+        return "The roots are imaginary.";
     }
-    else if(D=0){
-        long double x_root = -b/(2*a);
-        std::cout<<"The roots are real and equal which is: "<<x_root;
+}
+
+int main() {
+    std::ifstream testFile("test.txt");
+    long double a, b, c;
+    std::string expected_output;
+
+    if (!testFile) {
+        std::cerr << "Error: Could not open test.txt" << std::endl;
+        return 1;
     }
-    else if(D<0){
-        std::cout<<"The roots are imaginary.";
+
+    int test_num = 1;
+    while (testFile >> a >> b >> c && std::getline(testFile >> std::ws, expected_output)) {
+        std::string output = find_roots(a, b, c);
+        if (output == expected_output) {
+            std::cout << "Test " << test_num << " passed!" << std::endl;
+        } else {
+            std::cout << "Test " << test_num << " failed. Expected: \"" 
+                      << expected_output << "\", Got: \"" << output << "\"" << std::endl;
+        }
+        test_num++;
     }
+
+    testFile.close();
     return 0;
 }

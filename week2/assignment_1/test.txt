@@ -1,0 +1,17 @@
+John Doe
+5000000 1000000 500000
+Name: John Doe
+Gross Salary : Rp5.000.000,00
+Tax (20%)    : Rp1.000.000,00
+Installment  : Rp1.000.000,00
+Insurance    : Rp500.000,00
+Net Salary   : Rp2.500.000,00
+
+Jane Smith
+10000000 2000000 1000000
+Name: Jane Smith
+Gross Salary : Rp10.000.000,00
+Tax (20%)    : Rp2.000.000,00
+Installment  : Rp2.000.000,00
+Insurance    : Rp1.000.000,00
+Net Salary   : Rp5.000.000,00
