@@ -23,6 +23,5 @@ int main(){
             std::cout<<number_3<<" is the HIGHEST number";
         }
     }
-    
     return 0;   
 }

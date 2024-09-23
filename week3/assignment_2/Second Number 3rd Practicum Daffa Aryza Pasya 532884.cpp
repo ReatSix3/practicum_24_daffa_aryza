@@ -13,6 +13,7 @@ int main(){
     if(D>0){
         long double x1 = (-b+sqrt(D))/2*a;
         long double x2 = (-b-sqrt(D))/2*a;
+        std::cout<<"The roots of the equation are: "<<x1<<" and "<<x2;
     }
     else if(D=0){
         long double x_root = -b/(2*a);
