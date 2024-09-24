@@ -1,63 +1,31 @@
 #include <iostream>
 #include <vector>
 #include <string>
-#include <fstream>
-#include <sstream>
 
-std::string fizzbuzz() {
-    std::vector<std::string> output;
-    std::string result = "{";
-    
-    for(int i = 1; i <= 100; i++) {
-        if(i % 15 == 0) {
+int main(){
+    std::vector<std::string> output{};
+    for(int i = 1;i<=100;i++){
+        if(i % 15 == 0){
             output.push_back("FizzBuzz");
         }
-        else if(i % 5 == 0) {
+        else if(i % 5 == 0){
             output.push_back("Buzz");
         }
-        else if(i % 3 == 0) {
+        else if(i % 3 == 0){
             output.push_back("Fizz");
         }
-        else {
-            output.push_back(std::to_string(i));
+        else{
+            std::string i_string = std::to_string(i);
+            output.push_back(i_string);
         }
     }
-
-    for(int x = 0; x < output.size(); x++) {
-        result += output[x];
-        if(x != output.size() - 1) {
-            result += ", ";
-        }
+    std::cout<<"\n \n{";
+    for(int x = 0;x<100;x += 1){
+        std::cout<<output[x];
+        if(x != 99){
+            std::cout<<", ";
     }
-    result += "}";
-
-    return result;
-}
-
-int main() {
-    std::ifstream testFile("test.txt");
-    std::string expected_output;
-
-    if (!testFile) {
-        std::cerr << "Error: Could not open test.txt" << std::endl;
-        return 1;
     }
-
-    // Read the expected output from the file
-    std::getline(testFile, expected_output);
-
-    // Generate FizzBuzz output
-    std::string output = fizzbuzz();
-
-    // Compare the result with the expected output
-    if (output == expected_output) {
-        std::cout << "Test passed!" << std::endl;
-    } else {
-        std::cout << "Test failed. Expected: \"" 
-                  << expected_output << "\", Got: \"" 
-                  << output << "\"" << std::endl;
-    }
-
-    testFile.close();
+    std::cout<<"}";
     return 0;
 }
