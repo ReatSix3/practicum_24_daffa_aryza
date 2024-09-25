@@ -1,8 +1,8 @@
 # Variables
 CXX = g++
 CXXFLAGS = -Wall
-TARGET = 2_quadratic_formula
-SRC = 2_quadratic_formula.cpp
+TARGET = 2_quadratic_formula_testcase
+SRC = 2_quadratic_formula_testcase.cpp
 
 # Default target: compile the program
 all: $(TARGET)

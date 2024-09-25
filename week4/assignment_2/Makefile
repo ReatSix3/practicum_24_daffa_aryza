@@ -1,8 +1,8 @@
 # Variables
 CXX = g++
 CXXFLAGS = -Wall
-TARGET = 2_number_multiplier
-SRC = 2_number_multiplier.cpp
+TARGET = 2_number_multiplier_testcase
+SRC = 2_number_multiplier_testcase.cpp
 
 # Default target: compile the program
 all: $(TARGET)

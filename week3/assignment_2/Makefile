@@ -1,13 +1,13 @@
 # Variables
 CXX = g++
 CXXFLAGS = -Wall
-TARGET = 2_Quadratic_Equation
-SRC = 2_Quadratic_Equation.cpp
+TARGET = 2_highest_number_testcase
+SRC = 2_highest_number_testcase.cpp
 
 # Default target: compile the program
 all: $(TARGET)
 
-# Compile the .cpp
+# Compile the cpp
 $(TARGET): $(SRC)
 	$(CXX) $(CXXFLAGS) -o $(TARGET) $(SRC)
 

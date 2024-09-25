@@ -3,18 +3,7 @@
 #include <string>
 
 int main(){
-    std::vector<std::string> old_vector{};
-    while(true){
-        std::string element;
-        std::cout<<"Insert element that want to be added to 'old_vector' vector\n(type exit to quit this 'while loop')\n";
-        std::getline(std::cin,element);
-        if(element != "exit"){
-            old_vector.push_back(element);
-        }
-        else{
-            break;
-        }
-    }
+    std::vector<std::string> old_vector{"5","4","Three","Two","1"};
     int vk_size = old_vector.size();
     std::vector<std::string> new_vector{};
     for(int i = (vk_size-1);i >= 0;i-=1){
@@ -30,13 +19,21 @@ int main(){
     }
     std::cout << "]\n";
     std::cout << "Output:[";
+    std::string result;
     for(int x = 0;x < vk_size;x ++){
         std::cout<<new_vector[x];
-        
+        result += new_vector[x]+" ";
         if (x != vk_size - 1) {
             std::cout << ", ";
         }
     }
     std::cout << "]\n";
+    if(result == ("1 Two Three 4 5 ")){
+        std::cout<<"Test case succeed..";
+    }
+    else{
+        std::cout<<"Test case failed..";
+    }
+    //if(result=="")
     return 0;
 }

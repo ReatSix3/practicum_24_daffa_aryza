@@ -1,8 +1,8 @@
 # Variables
 CXX = g++
 CXXFLAGS = -Wall
-TARGET = 2_vector_reverter
-SRC = 2_vector_reverter.cpp
+TARGET = 2_vector_reverter_testcase
+SRC = 2_vector_reverter_testcase.cpp
 
 # Default target: compile the program
 all: $(TARGET)

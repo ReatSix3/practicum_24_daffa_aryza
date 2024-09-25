@@ -1,8 +1,8 @@
 # Variables
 CXX = g++
 CXXFLAGS = -Wall
-TARGET = 1_payslip
-SRC = 1_payslip.cpp
+TARGET = 1_payslip_testcase
+SRC = 1_payslip_testcase.cpp
 
 # Default target: compile the program
 all: $(TARGET)
