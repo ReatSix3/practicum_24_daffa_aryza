@@ -10,7 +10,6 @@ int main() {
         std::cout<<"The result of multiplication of "<<n<<" X "<<i<<" is "<<multi_val<<"\n";
         result += (std::to_string(multi_val)+" ");
     }
-    std::cout<<result;
     if(result == "5 10 15 20 25 30 35 40 45 50 "){
         std::cout<<"Test Case Succeed";
     }

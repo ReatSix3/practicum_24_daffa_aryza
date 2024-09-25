@@ -34,6 +34,5 @@ int main(){
     else{
         std::cout<<"Test case failed..";
     }
-    //if(result=="")
     return 0;
 }
