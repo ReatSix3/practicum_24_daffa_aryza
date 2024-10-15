@@ -2,9 +2,9 @@
 struct studentData 
     {
         std::string NIM;
-        float UTS;
-        float UAS;
-        float average;
+        double UTS;
+        double UAS;
+        double average;
     };
 studentData theData[50];
    
