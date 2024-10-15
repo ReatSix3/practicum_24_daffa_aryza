@@ -36,7 +36,7 @@ int main()
         std::cout<<"Average Score: "<<theData[i].average<<std::endl;
     }
     bool average_score_validity = false;
-    if(average_score[0] == 99.5 and average_score[1] == 70.25 and average_score[2] == 50.25){
+    if(theData[0].average== 99.5 and theData[1].average == 70.25 and theData[2].average == 50.25){
         average_score_validity = true;
     }
     if(inputted_student_counter == 3 and outputted_student_counter == 3 and average_score_validity == true){
