@@ -11,8 +11,16 @@ studentData theData[50];
 int main()
 {
     int n;
-    std::cout<<"Insert the number of students: ";
-    std::cin>>n;
+    while(true){
+        std::cout<<"Insert the number of students: ";
+        std::cin>>n;
+        if(n<=0 or n>50){
+            std::cout<<"Please enter number only ranging from 1-50."<<std::endl;
+        }
+        else{
+            break;
+        }
+    }
     std::cout<<"Input the data for each student.."<<std::endl;
     for(int i = 0; i<n; i++)
     {
