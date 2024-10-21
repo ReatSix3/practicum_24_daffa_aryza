@@ -1,8 +1,4 @@
-// 1. Write a program with some function to calculate simple mathematic operation,
-//namely addition or difference!
-//2. Write a program with recurrence function to calculate x! (x factorial)!
-//3. Write a program with recurrence function to calculate GCD (Greater Common
-//Division)!
+// 1. Write a program with some function to calculate simple mathematic operation, namely addition or difference!
 double addition(double a,double b);
 double difference(double a,double b);
 double multiply(double a,double b);
