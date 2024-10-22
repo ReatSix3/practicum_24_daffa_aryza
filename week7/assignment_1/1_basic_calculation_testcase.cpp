@@ -8,19 +8,19 @@ double division(double a,double b);
 int main(){
     bool test1,test2,test3,test4 = false;
     if(addition(169,98) == 267){
-        std::cout<<"Addition test case passed!!";
+        std::cout<<"Addition test case passed!!\n";
         test1 = true;
     }
     if(difference(197,26) == 171){
-        std::cout<<"Difference test case passed!!";
+        std::cout<<"Difference test case passed!!\n";
         test2= true;
     }
     if(multiply(28,98) == 2744){
-        std::cout<<"Multiply test case passed!!";
+        std::cout<<"Multiply test case passed!!\n";
         test3 = true;
     }
     if(division(50,25) == 2){
-        std::cout<<"Division test case passed!!";
+        std::cout<<"Division test case passed!!\n";
         test4 = true;
     }
     if((test1 == true) & (test2 == true) & (test3 == true) & (test4= true)){
