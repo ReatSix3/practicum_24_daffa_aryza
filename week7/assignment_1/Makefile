@@ -1,8 +1,8 @@
 # Variables
 CXX = g++
 CXXFLAGS = -Wall
-TARGET = 1_average_score_student_testcase
-SRC = 1_average_score_student_testcase.cpp
+TARGET = 1_basic_calculation_testcase
+SRC = 1_basic_calculation_testcase.cpp
 
 # Default target: compile the program
 all: $(TARGET)

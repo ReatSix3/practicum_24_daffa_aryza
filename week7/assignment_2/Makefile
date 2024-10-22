@@ -1,8 +1,8 @@
 # Variables
 CXX = g++
 CXXFLAGS = -Wall
-TARGET = 1_average_score_student_testcase
-SRC = 1_average_score_student_testcase.cpp
+TARGET = 2_factorial_recurrence_function_testcase
+SRC = 2_factorial_recurrence_function_testcase.cpp
 
 # Default target: compile the program
 all: $(TARGET)
