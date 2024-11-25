@@ -12,9 +12,11 @@ int main(){
     for(int i = 0;i<v3_len;i++){
         if(v1_i == v1.size()){
             v3.push_back(v2[v2_i]);
+            v2_i += 1;
         }
         else if(v2_i == v2.size()){
             v3.push_back(v1[v1_i]);
+            v1_i += 1;
         }
         else if(v1[v1_i]>v2[v2_i]){
             v3.push_back(v2[v2_i]);
